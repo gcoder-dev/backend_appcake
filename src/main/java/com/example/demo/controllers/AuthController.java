@@ -39,13 +39,13 @@ public class AuthController {
     }
 
 
-//    // --- ENDPOINT TEMPORAL ---
-//    @PostMapping("/register-temp")
-//    public ResponseEntity<?> registerTemp(@RequestBody AuthRequestDTO request) {
-//        try {
-//            return ResponseEntity.ok(authService.registrarAdminTemporal(request));
-//        } catch (Exception e) {
-//            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
-//        }
-//    }
+    // --- ENDPOINT TEMPORAL ---
+    @PostMapping("/register-temp")
+    public ResponseEntity<?> registerTemp(@RequestBody AuthRequestDTO request) {
+        try {
+            return ResponseEntity.ok(authService.registrarAdminTemporal(request));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
+        }
+    }
 }
